@@ -87,7 +87,7 @@ const LoginPage = () => {
 					router.back();
 				}, 1500); // wait for 1.5 seconds before redirecting
 			} else {
-				toast.error("Error : " + (error?.data?.message || "Unknown error"));
+				// toast.error("Error : " + (error?.data?.message || "Unknown error"));
 				console.error("Error logging in:", error);
 			}
 		} catch (error) {

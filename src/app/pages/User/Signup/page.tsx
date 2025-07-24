@@ -126,7 +126,7 @@ const SignupPage = () => {
 				}, 1500); // wait for 1.5 seconds before redirecting
 			} else {
 				console.error("Error signing up:", error);
-				toast.error("Error: " + (error?.data?.message || "Unknown error"));
+				// toast.error("Error: " + (error?.data?.message || "Unknown error"));
 			}
 		} catch (error) {
 			console.error("Error signing up:", error);
