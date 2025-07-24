@@ -1,45 +1,39 @@
-"use client"
+"use client";
 import Navbar from "@/components/common/Navbar";
 import BlogDetails from "@/app/pages/posts/blog/BlogDetails";
 import Footer from "@/components/common/Footer";
 import { useViewBlogDetailsQuery } from "@/redux/blog/blogSlice";
 import blogPosts from "@/lib/blogData";
 
-
-const BlogDetailsPage =({params}:any) => {
-   console.log("params", params);
-   const blogId = params?.blogDetails || {};
-   console.log(
-  "blogID", blogId
-   );
-  //  as im using dummy data that's why using this, it's not applicable for api call
-   const blog = blogPosts.find((item) => item.id == blogId);
-   console.log(
-    "details", blog
-   );
-   // this is for dynamic api calling
-   //@ts-ignore
-  //  const {data} = useViewBlogDetailsQuery(blogId)
-  //  console.log("details data", data);
-  //  const data = await getData(blogId);
-  return (
-    <div className="bg-[#FFFFFF] ">
-      <Navbar
-        textColor="#343F52"
-        buttonBorderColor="none"
-        buttonColor="#153870"
-        buttonTextColor="#FFFFFF"
-        buttonHoverColor="#016B90"
-        buttonHoverTextColor="#FFFFFF"
-        dropdownBgColor="white"
-      />
-      {/* blogId={blogId} */}
-     <BlogDetails  blog={blog}/>
-      <Footer  textColor="#133366" iconColor="#133366" />
-    </div>
-  );
+const BlogDetailsPage = ({ params }: any) => {
+	// console.log("params", params);
+	const blogId = params?.blogDetails || {};
+	// console.log("blogID", blogId);
+	//  as im using dummy data that's why using this, it's not applicable for api call
+	const blog = blogPosts.find((item) => item.id == blogId);
+	// console.log("details", blog);
+	// this is for dynamic api calling
+	//@ts-ignore
+	//  const {data} = useViewBlogDetailsQuery(blogId)
+	//  console.log("details data", data);
+	//  const data = await getData(blogId);
+	return (
+		<div className="bg-[#FFFFFF] ">
+			<Navbar
+				textColor="#343F52"
+				buttonBorderColor="none"
+				buttonColor="#153870"
+				buttonTextColor="#FFFFFF"
+				buttonHoverColor="#016B90"
+				buttonHoverTextColor="#FFFFFF"
+				dropdownBgColor="white"
+			/>
+			{/* blogId={blogId} */}
+			<BlogDetails blog={blog} />
+			<Footer textColor="#133366" iconColor="#133366" />
+		</div>
+	);
 };
-
 
 // type Props = {
 //   params: { blogId: string };
@@ -49,7 +43,7 @@ const BlogDetailsPage =({params}:any) => {
 //   const { params } = props;
 //   const blog = await getBlogById(params.blogId);
 //   return {
-    
+
 //     // author:blog.author,
 //     // description: blog.short_description,
 //     openGraph: {
@@ -66,7 +60,6 @@ const BlogDetailsPage =({params}:any) => {
 //     },
 //   };
 // };
-
 
 // async function getData(blogId: string) {
 //   // Fetch data from external API
@@ -87,5 +80,3 @@ const BlogDetailsPage =({params}:any) => {
 // }
 
 export default BlogDetailsPage;
-
-

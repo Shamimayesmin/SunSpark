@@ -6,7 +6,6 @@ import Link from "next/link";
 const SingleBlog = ({ blog }: any) => {
 	console.log("singleblog", blog);
 
-  
 	// Format the createdAt date
 	// const formatDate = (dateString: string) => {
 	//   const options: Intl.DateTimeFormatOptions = {

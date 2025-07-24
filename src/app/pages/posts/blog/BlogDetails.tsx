@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import img from "@/assets/blog/Image.jpg";
@@ -7,72 +7,74 @@ import { useViewBlogDetailsQuery } from "@/redux/blog/blogSlice";
 import DOMPurify from "dompurify";
 
 import blogPosts from "@/lib/blogData";
-import profilePhoto from "@/assets/blog/Image.jpg"
+import profilePhoto from "@/assets/blog/Image.jpg";
 
 // interface BlogDetailsProps {
-  
+
 //   blogId: any;
-// } 
+// }
 
 interface Blog {
-  id: string;
-  title: string;
-  date: string;
-  author: string;
-  content: string;
-  image: string;
+	id: string;
+	title: string;
+	date: string;
+	author: string;
+	content: string;
+	image: string;
 }
 
 // {blogId}: BlogDetailsProps) it will use dynamic id wise api call below function
 
 const BlogDetails = ({ blog }: any) => {
-    console.log("blogs", blog);
-    
-    //@ts-ignore
-    // const {data:detailsData} = useViewBlogDetailsQuery(blogId)
-    // console.log("details", detailsData?.data);
-    // const {updatedAt,createdAt,content,author,image,title} = detailsData?.data ||{}
+	console.log("blogs", blog);
 
-    const {title, date, content, image} = blog || {}
-    const sanitizedData = () => ({
-      __html: DOMPurify?.sanitize(content),
-    });
+	//@ts-ignore
+	// const {data:detailsData} = useViewBlogDetailsQuery(blogId)
+	// console.log("details", detailsData?.data);
+	// const {updatedAt,createdAt,content,author,image,title} = detailsData?.data ||{}
 
-  
+	const { title, date, content, image } = blog || {};
+	const sanitizedData = () => ({
+		__html: DOMPurify?.sanitize(content),
+	});
 
-    return (
-        <section className="py-6 lg:max-w-screen-xl px-4 lg:px-0 mx-auto">
-        <label htmlFor="">
-          <button className="btn btn-outline bg-[#E8EBF1] md:btn-sm btn-xs mb-5 lg:text-base text-[8px]">
-            Technology
-          </button>
-        </label>
-        <h2 className="lg:text-[36px] leading-snug text-xs text-[#181A2A] font-semibold md:mb-5 mb-3 lg:mr-48">
-          {title}
-        </h2>
-        <div>
-          <div className="flex gap-6 md:mb-8 mb-3 md:mt-5 mt-2 items-center">
-            <div className="flex gap-2 items-center">
-              <div className="avatar">
-                <div className="lg:w-7 w-5 rounded-full">
-                  <Image
-                    src={profilePhoto}
-                    alt="Tailwind-CSS-Avatar-component"
-                  />
-                </div>
-              </div>
-              <p className="md:text-base text-[6px]">Tracey Wilson</p>
-            </div>
-            {/* <p className="md:text-base text-[6px]">{createdAt}</p> */}
-            <p className="md:text-base text-[6px]">{date}</p>
-          </div>
-          <Image className="w-full h-[450px] rounded-md" src={image} alt="Image" height={100} width={100} />
-          <div className="md:pb-14 pb-6">
-            <p className="md:mt-8 mt-4 text-start md:text-base text-[9px]" dangerouslySetInnerHTML={sanitizedData()}>
-             
-            </p>
-            <br />
-            {/* <p className="text-start mt-3 md:text-base text-[9px]">
+	return (
+		<section className="py-6 lg:max-w-screen-xl px-4 lg:px-0 mx-auto">
+			<label htmlFor="">
+				<button className="btn btn-outline bg-[#E8EBF1] md:btn-sm btn-xs mb-5 lg:text-base text-[8px]">
+					Technology
+				</button>
+			</label>
+			<h2 className="lg:text-[36px] leading-snug text-xs text-[#181A2A] font-semibold md:mb-5 mb-3 lg:mr-48">
+				{title}
+			</h2>
+			<div>
+				<div className="flex gap-6 md:mb-8 mb-3 md:mt-5 mt-2 items-center">
+					<div className="flex gap-2 items-center">
+						<div className="avatar">
+							<div className="lg:w-7 w-5 rounded-full">
+								<Image src={profilePhoto} alt="Tailwind-CSS-Avatar-component" />
+							</div>
+						</div>
+						<p className="md:text-base text-[6px]">Tracey Wilson</p>
+					</div>
+					{/* <p className="md:text-base text-[6px]">{createdAt}</p> */}
+					<p className="md:text-base text-[6px]">{date}</p>
+				</div>
+				<Image
+					className="w-full h-[450px] rounded-md"
+					src={image}
+					alt="Image"
+					height={100}
+					width={100}
+				/>
+				<div className="md:pb-14 pb-6">
+					<p
+						className="md:mt-8 mt-4 text-start md:text-base text-[9px]"
+						dangerouslySetInnerHTML={sanitizedData()}
+					></p>
+					<br />
+					{/* <p className="text-start mt-3 md:text-base text-[9px]">
               One of the most rewarding aspects of traveling is immersing
               yourself in the local culture and customs. This includes trying
               local cuisine, attending cultural events and festivals, and
@@ -80,8 +82,8 @@ const BlogDetails = ({ blog }: any) => {
               language can also go a long way in making connections and showing
               respect.
             </p> */}
-          </div>
-          {/* <div className="md:mt-8 mt-4 md:pb-14 pb-6">
+				</div>
+				{/* <div className="md:mt-8 mt-4 md:pb-14 pb-6">
             <h1 className="md:text-[24px] text-[9px] font-semibold mb-3">
               Research Your Destination
             </h1>
@@ -193,9 +195,9 @@ const BlogDetails = ({ blog }: any) => {
               beauty of your surroundings.
             </p>
           </div> */}
-        </div>
-      </section>
-    );
+			</div>
+		</section>
+	);
 };
 
 export default BlogDetails;

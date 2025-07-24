@@ -32,10 +32,22 @@ const page = ({ params }: any) => {
 				<div className="py-8 border-b-2">
 					<p className="font-semibold text-2xl">Order Status</p>
 					<ul className="steps steps-vertical lg:steps-horizontal py-10 lg:w-2/3 w-full">
-						<li className="step step-primary text-sm">Order Recieved <span className="text-xs">Jul 16, 2022 3:30 PM</span></li>
-						<li className="step step-primary text-sm">Order Processing <span className="text-xs">Jul 16, 2022 3:30 PM</span></li>
-						<li className="step text-sm step-primary">Order Shipped <span className="text-xs">Jul 16, 2022 3:30 PM</span> </li>
-						<li className="step text-sm">Order Delivered <span className="text-xs">Jul 16, 2022 3:30 PM</span> </li>
+						<li className="step step-primary text-sm">
+							Order Recieved{" "}
+							<span className="text-xs">Jul 16, 2022 3:30 PM</span>
+						</li>
+						<li className="step step-primary text-sm">
+							Order Processing{" "}
+							<span className="text-xs">Jul 16, 2022 3:30 PM</span>
+						</li>
+						<li className="step text-sm step-primary">
+							Order Shipped{" "}
+							<span className="text-xs">Jul 16, 2022 3:30 PM</span>{" "}
+						</li>
+						<li className="step text-sm">
+							Order Delivered{" "}
+							<span className="text-xs">Jul 16, 2022 3:30 PM</span>{" "}
+						</li>
 					</ul>
 				</div>
 				<div className="py-8 border-b-2">
@@ -91,10 +103,16 @@ const page = ({ params }: any) => {
 									</p>
 								</div>
 								<div className="">
-									{order?.orderStatus=='Delivered' ?(<Link href={`/pages/AllProducts/RatingAndReview/${item?.product?._id}`}className="text-[#191919] text-xs lg:text-base font-medium">
-										Rating and Review
-									</Link>):(<></>)}
-									
+									{order?.orderStatus == "Delivered" ? (
+										<Link
+											href={`/pages/AllProducts/RatingAndReview/${item?.product?._id}`}
+											className="text-[#191919] text-xs lg:text-base font-medium"
+										>
+											Rating and Review
+										</Link>
+									) : (
+										<></>
+									)}
 								</div>
 							</div>
 						</div>

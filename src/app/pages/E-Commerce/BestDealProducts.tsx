@@ -9,22 +9,21 @@ import Product from "@/components/common/Product";
 import Loader from "@/components/common/Loader/Loader";
 import { useEffect, useState } from "react";
 // image
-import batteryImg from "@/assets/products/battery.png"
+import batteryImg from "@/assets/products/battery.png";
 
-import img1 from '@/assets/products/battery.png'
-import img2 from '@/assets/products/inverter.png'
-import img3 from '@/assets/products/panel.png'
-import img4 from '@/assets/products/power.png'
+import img1 from "@/assets/products/battery.png";
+import img2 from "@/assets/products/inverter.png";
+import img3 from "@/assets/products/panel.png";
+import img4 from "@/assets/products/power.png";
 
 const BestDealProducts = () => {
-
 	//@ts-ignore
 	// const { data: product, isLoading } = useGetBestDealQuery();
 	// const products = product?.data || [];
 	const [products, setProducts] = useState<any[]>([]);
 	const [isLoading, setIsLoading] = useState(true);
 
-// ✅ Inline Mock Data
+	// ✅ Inline Mock Data
 	const mockData = {
 		data: [
 			{
@@ -69,7 +68,6 @@ const BestDealProducts = () => {
 			setIsLoading(false);
 		}, 1000); // Simulate loading
 	}, []);
-
 
 	return (
 		<div className="mt-20">

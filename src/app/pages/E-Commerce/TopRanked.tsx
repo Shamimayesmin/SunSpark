@@ -73,7 +73,6 @@ const TopRanked = () => {
 					// navigation={true}
 					modules={[Autoplay, Pagination, Navigation]}
 					cssMode={true}
-					
 					className="mySwiper mt-7 lg:mt-20"
 				>
 					{products.map((pro: any, index: any) => {
@@ -107,14 +106,13 @@ const TopRanked = () => {
 													${pro?.product?.previous_price}
 												</span>
 											</p>
-											
+
 											<Link href={`/pages/AllProducts/${product?._id}`}>
 												<button className="mt-5 lg:mt-16 text-[8px] lg:text-base btn bg-[#153870] hover:bg-[#016B90] text-white btn-xs lg:btn-md flex justify-center items-center">
 													View Details
 												</button>
 											</Link>
 										</div>
-										
 									</div>
 								</div>
 							</SwiperSlide>

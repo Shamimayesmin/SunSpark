@@ -19,8 +19,8 @@ import toast, { Toaster } from "react-hot-toast";
 
 const cookies = new Cookies();
 
-const MIN_PASSWORD_LENGTH = 8; 
-const MAX_PASSWORD_LENGTH = 20; 
+const MIN_PASSWORD_LENGTH = 8;
+const MAX_PASSWORD_LENGTH = 20;
 
 const SignupPage = () => {
 	const [email, setEmail] = useState("");
@@ -82,8 +82,6 @@ const SignupPage = () => {
 			newErrors.email = "Invalid email format";
 			hasError = true;
 		}
-
-		
 
 		// Password validation
 		if (!password) {
@@ -158,7 +156,11 @@ const SignupPage = () => {
 			<div className="lg:w-1/2 lg:px-24 px-4 pt-10 lg:pt-0 ">
 				<div className="flex flex-wrap justify-between items-center">
 					<Link href={"/"}>
-						<Image src={logo} alt="Logo" className="lg:h-16 lg:w-36 h-10 w-20"></Image>
+						<Image
+							src={logo}
+							alt="Logo"
+							className="lg:h-16 lg:w-36 h-10 w-20"
+						></Image>
 					</Link>
 					<h1 className="text-[#153870] text-center text-2xl lg:text-3xl font-bold">
 						Registration

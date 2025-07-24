@@ -20,9 +20,8 @@ import FacebookButton from "@/components/common/sociallogin/FacebookButton";
 
 const cookies = new Cookies();
 
-
-const MIN_PASSWORD_LENGTH = 8;  
-const MAX_PASSWORD_LENGTH = 20; 
+const MIN_PASSWORD_LENGTH = 8;
+const MAX_PASSWORD_LENGTH = 20;
 
 const LoginPage = () => {
 	const [email, setEmail] = useState("");
@@ -55,8 +54,6 @@ const LoginPage = () => {
 			newErrors.email = "Invalid email format";
 			hasError = true;
 		}
-
-		
 
 		// Password validation
 		if (!password) {
@@ -117,7 +114,11 @@ const LoginPage = () => {
 			<div className="lg:w-1/2 w-full px-4 lg:px-24  ">
 				<div className="flex flex-wrap justify-between items-center">
 					<Link href={"/"}>
-						<Image src={logo} alt="Logo" className="lg:h-16 lg:w-36 h-10 w-20"></Image>
+						<Image
+							src={logo}
+							alt="Logo"
+							className="lg:h-16 lg:w-36 h-10 w-20"
+						></Image>
 					</Link>
 					<h1 className="text-[#153870] text-center text-2xl lg:text-3xl font-bold">
 						Login
@@ -177,11 +178,11 @@ const LoginPage = () => {
 							)}
 						</div>
 					</div>
-				<Link href={"/pages/User/forgetpassword"}>
-				<p className="text-end text-[#FE3003] text-[10px] lg:text-xs font-medium mt-4">
-						Forget Password?
-					</p>
-				</Link>
+					<Link href={"/pages/User/forgetpassword"}>
+						<p className="text-end text-[#FE3003] text-[10px] lg:text-xs font-medium mt-4">
+							Forget Password?
+						</p>
+					</Link>
 					<div className="mt-5 flex justify-center">
 						<button
 							type="submit"

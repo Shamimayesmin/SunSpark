@@ -13,28 +13,28 @@ import Blog from "@/components/home/blog";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Solar-PVI | For Renewable Energy",
-  description:
-    "Harness the power of the sun with Solar-PVI's innovative solar panel solutions.",
-  icons: {
-    icon: "/favicon.png",
-  },
+	title: "Solar-PVI | For Renewable Energy",
+	description:
+		"Harness the power of the sun with Solar-PVI's innovative solar panel solutions.",
+	icons: {
+		icon: "/favicon.png",
+	},
 };
 
 export default function Home() {
-  return (
-    <main style={{ backgroundColor: "white" }}>
-      <HeroSection></HeroSection>
-      <CompanyOverview></CompanyOverview>
-      <Solution></Solution>
-      <FeaturedProducts></FeaturedProducts>
-      <Products></Products>
-      <Comment></Comment>
-      <FAQ></FAQ>
-      <Revolution></Revolution>
-      <Blog />
-      <Contact></Contact>
-      <Footer textColor="#133366" iconColor="#133366"></Footer>
-    </main>
-  );
+	return (
+		<main style={{ backgroundColor: "white" }}>
+			<HeroSection></HeroSection>
+			<CompanyOverview></CompanyOverview>
+			<Solution></Solution>
+			<FeaturedProducts></FeaturedProducts>
+			<Products></Products>
+			<Comment></Comment>
+			<FAQ></FAQ>
+			<Revolution></Revolution>
+			<Blog />
+			<Contact></Contact>
+			<Footer textColor="#133366" iconColor="#133366"></Footer>
+		</main>
+	);
 }
