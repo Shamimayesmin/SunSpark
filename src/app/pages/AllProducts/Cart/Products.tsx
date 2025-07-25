@@ -101,12 +101,12 @@ console.log(cartItems)
     const qtyToAdd = 1;
     const productData = await getProductById(id);
 
-    if (Number(quantity) + qtyToAdd > Number(productData?.stock)) {
-      toast.error(`Please select quantity less than ${productData?.stock}`, {
-        id: loadingToast,
-      });
-      return;
-    }
+    // if (Number(quantity) + qtyToAdd > Number(productData?.stock)) {
+    //   toast.error(`Please select quantity less than ${productData?.stock}`, {
+    //     id: loadingToast,
+    //   });
+    //   return;
+    // }
 
     dispatch(incrementQuantity({id}));
     toast.success("Quantity increased", { id: loadingToast });

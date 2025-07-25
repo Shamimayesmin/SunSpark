@@ -46,7 +46,7 @@ const page = () => {
 		//@ts-ignore
 		if (res.data?.statusCode === 200) {
 			//@ts-ignore
-			toast.success(res.data.message);
+			// toast.success(res.data.message);
 			//@ts-ignore
 		} else {
 			//@ts-ignore

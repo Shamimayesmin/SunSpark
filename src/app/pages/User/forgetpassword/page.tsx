@@ -27,7 +27,7 @@ const page = () => {
 			//@ts-ignore
 		} else if (res?.error?.status === 500) {
 			//@ts-ignore
-			toast.error(res.error.data.message);
+			// toast.error(res.error.data.message);
 
 			//@ts-ignore
 		} else {

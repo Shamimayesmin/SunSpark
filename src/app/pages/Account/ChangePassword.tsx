@@ -72,7 +72,7 @@ const ChangePassword = () => {
 				setNewPassword("");
 				setErrors({ currentPassword: "", newPassword: "" });
 			} else {
-				toast.error("Error: " + (error?.data?.message || "Unknown error"));
+				// toast.error("Error: " + (error?.data?.message || "Unknown error"));
 			}
 		} catch (error) {
 			console.error("Failed to change password:", error);
