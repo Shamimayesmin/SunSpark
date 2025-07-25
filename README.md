@@ -59,10 +59,7 @@ bun dev
 
 <!-- ### 1. Clone the Repository -->
 
-###  Note
-This version is frontend-only and does not include real API or database integrations.
 
-Some features are mocked or disabled due to missing backend endpoints.
 
 
 
