@@ -74,9 +74,9 @@ const AllCheckOut = () => {
         }
           router.push(`/pages/AllProducts/CheckOut/payment/${data.data._id}`);
         }
-        if (error.status == 500) {
-        router.push("/");
-        }
+        // if (error.status == 500) {
+        // router.push("/");
+        // }
     }
   };
   return (
