@@ -9,7 +9,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { addToCart } from "@/redux/cart/cartStore";
 import { addOrderProduct, resetProduct } from "@/redux/order/orderStore";
 
-import ReactImageMagnify from "react-image-magnify";
+// import ReactImageMagnify from "react-image-magnify";
 
 import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
@@ -157,7 +157,7 @@ const user = userdata?.data;
       <Toaster />
       <div className="w-full lg:w-1/2">
         <div className=" lg:w-full flex flex-row gap-4">
-          <ReactImageMagnify
+          {/* <ReactImageMagnify
             className="w-full object-cover h-fit aspect-[3/2] mx-auto rounded-md p-6 bg-[#F1F1F1] "
             {...{
               smallImage: {
@@ -176,7 +176,7 @@ const user = userdata?.data;
                 height: "100%",
               },
             }}
-          />
+          /> */}
           <div className="flex flex-row md:flex-col flex-wrap align-center mx-auto justify-around gap-2 w-40">
             {image_url?.slice(0, 4).map((item: any, index: any) => (
               <Image
